@@ -1,0 +1,8 @@
+git@github.com:tjchang/notes.git
+
+# Enable tap-to-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Show filename extensions by default
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
