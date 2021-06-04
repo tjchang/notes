@@ -1,13 +1,3 @@
-git@github.com:tjchang/notes.git
-
-# Enable tap-to-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Show filename extensions by default
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-
 #!/bin/bash
 
 # Create a folder who contains downloaded things for the setup
@@ -40,12 +30,12 @@ brew install wget
 # git
 brew install git                                                                                      # https://formulae.brew.sh/formula/git
 # Adding git aliases (https://github.com/thomaspoignant/gitalias)
-git clone https://github.com/thomaspoignant/gitalias.git $INSTALL_FOLDER/gitalias && echo -e "[include]\n    path = $INSTALL_FOLDER/gitalias/.gitalias\n$(cat ~/.gitconfig)" > ~/.gitconfig
+  # git clone https://github.com/thomaspoignant/gitalias.git $INSTALL_FOLDER/gitalias && echo -e "[include]\n    path = $INSTALL_FOLDER/gitalias/.gitalias\n$(cat ~/.gitconfig)" > ~/.gitconfig
 
-brew install git-secrets                                                                              # git hook to check if you are pushing aws secret (https://github.com/awslabs/git-secrets)
-git secrets --register-aws --global
-git secrets --install ~/.git-templates/git-secrets
-git config --global init.templateDir ~/.git-templates/git-secrets
+  # brew install git-secrets                                                                              # git hook to check if you are pushing aws secret (https://github.com/awslabs/git-secrets)
+  # git secrets --register-aws --global
+  # git secrets --install ~/.git-templates/git-secrets
+  # git config --global init.templateDir ~/.git-templates/git-secrets
 
 # ZSH
 brew install zsh zsh-completions                                                                      # Install zsh and zsh completions
@@ -111,8 +101,8 @@ brew install --cask slack
   # brew install --cask whatsapp
 
 # Dev tools
-  # brew install --cask ngrok                                                                               # tunnel localhost over internet.
-  # brew install --cask postman                                                                             # Postman makes sending API requests simple.
+brew install --cask ngrok                                                                               # tunnel localhost over internet.
+brew install --cask postman                                                                             # Postman makes sending API requests simple.
 
 # IDE
  # brew install --cask jetbrains-toolbox
@@ -120,10 +110,10 @@ brew install --cask visual-studio-code
 
 # Language
 ## Node / Javascript
-  # mkdir ~/.nvm
-  # brew install nvm                                                                                     # choose your version of npm
-  # nvm install node                                                                                     # "node" is an alias for the latest version
- # brew install yarn                                                                                    # Dependencies management for node
+mkdir ~/.nvm
+brew install nvm                                                                                     # choose your version of npm
+nvm install node                                                                                     # "node" is an alias for the latest version
+brew install yarn                                                                                    # Dependencies management for node
 
 
 ## Java
